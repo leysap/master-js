@@ -6,35 +6,40 @@
     <link rel="stylesheet" href="/style.css">
     <title>API PRODUCTS</title>
 </head>
-<body>
+<body id="body-main">
     <!-- HEADER -->
     <header>
         <nav id="barra-nav" class="barra-nav">
             <ul class="barra_nav_puntos">
                 <li><a href="#catalogue">Catalogue</a></li>
-                <li><a href="">Random Photo</a></li>
-                <li><a href="">Random ID</a></li>
-                <li><a href="">Change the color of the background</a></li>
+                <li><a href="#container-random-photo">Random Photo</a></li>
+                <li><a href="#container-random-info">Random ID</a></li>
             </ul>
         </nav>
     </header>
+    <!-- BUTTON CHANGE THE COLOR OF THE BACKGROUND -->
+    <div id="div-button">
+        <button id="changeColorButton"> Change the color of the background</button>
+    </div>
 
-    
     <!-- CATALOGUE -->
     <h1 id="catalogue">CATALOGUE</h1>
     <div class="buttons">
-        <button>ID</button>
-        <button>Title</button>
-        <button>Body</button>
+        <h2>WHAT ID DO YOU WANT TO READ?</h2>
+        <input type="text" id="input" placeholder="Insert number 1-100">
+        <button id="mySubmitButton" class="center bluebox insertbutton">Buscar</button>
+        <!-- <button id="button-id">ID</button>
+        <button id="button-title">Title</button>
+        <button id="button-body">Body</button> -->
     </div>
-    <div class="container">
+    <div id="container" class="container">
         
     </div>
 
 <!-- RANDOM PHOTO USING PICSUM -->
     <div id="container-random-photo">
         <h2>RANDOM PHOTO</h2>
-        <button>Show a random photo</button>
+        <button id="button-random-photo">Show a random photo</button>
         <div id="container-photo"></div>
     </div>
 
