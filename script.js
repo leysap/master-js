@@ -216,8 +216,8 @@ buttonPhoto.addEventListener('click', () => {
 });
 
 buttonPhoto.addEventListener('mouseover', () => {
-    buttonPhoto.style.backgroundColor = '#252323';
-    buttonPhoto.style.color = '#ffbd59';
+    buttonPhoto.style.backgroundColor = 'rgb(250, 152, 132)';
+    buttonPhoto.style.color = "white";
 });
 
 buttonPhoto.addEventListener('mouseout', () => {
