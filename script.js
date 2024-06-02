@@ -143,7 +143,12 @@ function renderList() {
         buttonElement.onclick = () => {
             showDeleteConfirmation(index);
         };
-
+        liElement.style.background="white"
+        liElement.style.padding="1em"
+        liElement.style.borderRadius="1em"
+        liElement.style.marginRight="4em"
+        liElement.style.marginLeft="4em"
+        liElement.style.marginTop="0.5em"
         liElement.appendChild(idElement);
         liElement.appendChild(titleElement);
         liElement.appendChild(bodyElement);
