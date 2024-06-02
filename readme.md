@@ -21,3 +21,5 @@ Let me explain about this proyect....
 - The logic of the page. 
 - We use the API UNSPLASH to get a photo and show it (render) in the HTML.
 - We use async await (promises), functions, bucles , styles(css) and implement events (like mouseover,mouseout, click).
+- We created a button which change the color of the background (like we did in class).
+- Also a list of products (object: ID, Title and Body).

@@ -283,6 +283,15 @@ buttonRandomInfo.addEventListener('click', () => {
     getRandomPost();    
     
 });
+buttonRandomInfo.addEventListener('mouseover', () => {
+    buttonRandomInfo.style.backgroundColor = 'rgb(250, 152, 132)';
+    buttonRandomInfo.style.color = "white";
+});
+
+buttonRandomInfo.addEventListener('mouseout', () => {
+    buttonRandomInfo.style.backgroundColor = 'white';
+    buttonRandomInfo.style.color = 'black';
+});
 
 //click in button show all the products
 buttonShowInfo.addEventListener('click', async () => {
@@ -313,4 +322,17 @@ buttonShowInfo.addEventListener('click', async () => {
         }
     });
 
+});
+
+buttonShowInfo.addEventListener('mouseover', () => {
+    buttonShowInfo.style.backgroundColor = 'rgb(250, 152, 132)';
+    buttonShowInfo.style.color = "white";
+    buttonShowInfo.style.borderRadius = "1em";
+
+});
+
+buttonShowInfo.addEventListener('mouseout', () => {
+    buttonShowInfo.style.backgroundColor = 'white';
+    buttonShowInfo.style.color = 'black';
+    buttonShowInfo.style.borderRadius = '1em';
 });
