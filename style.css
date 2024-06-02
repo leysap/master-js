@@ -79,6 +79,9 @@ h1{
     padding: 1.5em;
     border-radius: 0.5em;
 }
+#title-list{
+    margin-bottom: 1em;
+}
 .subtitle{
     text-align: center;
     margin-top: 1em;

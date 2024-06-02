@@ -23,3 +23,4 @@ Let me explain about this proyect....
 - We use async await (promises), functions, bucles , styles(css) and implement events (like mouseover,mouseout, click).
 - We created a button which change the color of the background (like we did in class).
 - Also a list of products (object: ID, Title and Body).
+- We consult to CHAT GPT to resolve problems in the render and and in the logic of some functions. 
