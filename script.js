@@ -98,6 +98,7 @@ const containerList= document.getElementById("containerList")
 const buttonList= document.getElementById("buttonAddList")
 const listIdElement= document.getElementById("list")
 
+//function to add a product into array listOfId and render it
 function addId(postData) {
 
     const newId = {
@@ -109,19 +110,20 @@ function addId(postData) {
     listOfId.push(newId)
     renderList()
 }
-
-function removePost(indexOfPostToBeRemoved) {
+//function to delete a product in the array
+function removeProduct(indexOfPostToBeRemoved) {
     listOfId.splice(indexOfPostToBeRemoved, 1);
     renderList();
 }
+//function to ask you if you are sure to delete a product 
 function showDeleteConfirmation(index) {
     const confirmDelete = window.confirm("¿Delete?");
     if (confirmDelete) {
-        removePost(index)
+        removeProduct(index)
     }
 
 }
-
+// we render the object (array) into the HTML created a new element(li)
 function renderList() {
     listIdElement.innerHTML = '';
     listOfId.forEach((data, index) => {
@@ -157,7 +159,7 @@ function renderList() {
         listIdElement.appendChild(liElement);
     });
 }
-
+// Event "click" call the functions
 buttonList.addEventListener('click', async (e) => {
     e.preventDefault();
     const postId = inputId.value.trim();
@@ -219,7 +221,7 @@ buttonPhoto.addEventListener('click', () => {
     getPhoto();    
     
 });
-
+//apply events
 buttonPhoto.addEventListener('mouseover', () => {
     buttonPhoto.style.backgroundColor = 'rgb(250, 152, 132)';
     buttonPhoto.style.color = "white";
@@ -255,6 +257,7 @@ function renderPost(postData,container) {
 function objectRender(post, container){
     post.forEach(producto => {
         const productoElemento = document.createElement('div');
+        productoElemento.style.marginTop="5em"
         productoElemento.innerHTML = `
           <h2>ID: ${producto.id}</h2>
           <h2>Title: ${producto.title}</h2>
@@ -275,6 +278,10 @@ buttonRandomInfo.addEventListener('click', () => {
             const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomId}`);
             if (response.status === 200) {                
                 const postData = await response.json();
+                divRandomInfo.style.background="white"
+                divRandomInfo.style.padding="0.5em"
+                divRandomInfo.style.borderRadius="0.5em"
+                divRandomInfo.style.marginTop="0.5em"
                 renderPost(postData, divRandomInfo)
             } else {
                 console.error("Error loading ");
@@ -288,6 +295,7 @@ buttonRandomInfo.addEventListener('click', () => {
     getRandomPost();    
     
 });
+//apply events
 buttonRandomInfo.addEventListener('mouseover', () => {
     buttonRandomInfo.style.backgroundColor = 'rgb(250, 152, 132)';
     buttonRandomInfo.style.color = "white";
@@ -298,7 +306,7 @@ buttonRandomInfo.addEventListener('mouseout', () => {
     buttonRandomInfo.style.color = 'black';
 });
 
-//click in button show all the products
+//click in button to show all the products and we created a button that you choose to hide or show the information
 buttonShowInfo.addEventListener('click', async () => {
 
     async function getInfo () {
@@ -309,6 +317,10 @@ buttonShowInfo.addEventListener('click', async () => {
             }
             const postData = await response.json();
             hideOrShowButton.style.display="block"
+            divShowInfo.style.background="white"
+            divShowInfo.style.padding="0.5em"
+            divShowInfo.style.borderRadius="0.5em"
+            divShowInfo.style.marginTop="0.5em"
             objectRender(postData, divShowInfo)
         
         } catch (error) {
@@ -328,7 +340,7 @@ buttonShowInfo.addEventListener('click', async () => {
     });
 
 });
-
+//apply events
 buttonShowInfo.addEventListener('mouseover', () => {
     buttonShowInfo.style.backgroundColor = 'rgb(250, 152, 132)';
     buttonShowInfo.style.color = "white";
